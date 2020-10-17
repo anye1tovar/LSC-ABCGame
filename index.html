@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<script>
+  var selected = null;
+  var score = 0;
+  function showImage(event) {
+    var name = event.target.id;
+    document.getElementById(event.target.id).src = 'img/' + name + '.png';
+    if (selected == null) {
+      selected = name;
+    }
+    else if (selected.split('_', 1)[0] != name.split('_', 1)[0]) {
+      setTimeout(() => {
+        document.getElementById(name).src = 'img/default.png';
+        document.getElementById(selected).src = 'img/default.png';
+        selected = null;
+      }, 1500);
+    }
+    else {
+      selected = null;
+      score = score + 1;
+      document.getElementById('score').innerHTML = 'Puntaje = ' + score;
+    }
+  }
+</script>
+
+<style>
+  .card {
+    width: 100px;
+    height: 100px;
+  }
+</style>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <title>Juego Memoria ABC LSC</title>
+</head>
+
+<body>
+  <div>
+    <div>
+      <h4 style="font-family: Arial;">Juego de memoria ABC LSC</h4>
+      <h5 style="font-family: Arial;">Encuentra la pareja de cada letra relacionando el abecedario en LSC con las letras
+        escritas.</h5>
+    </div>
+
+    <div>
+      <h4 id="score" style="font-family: Arial; color: cornflowerblue;">Puntaje = 0</h4>
+    </div>
+
+    <img class="card" id="A" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="F_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="B" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="J" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="C_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="D_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="E" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="A_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="E_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="F" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="K_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="G" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="H" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="B_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="H_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="I" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="D" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="C" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="J_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="K" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="L" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="M" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="I_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="M_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="N" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="Ñ" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="O" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="P_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="Q" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="Q_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="X" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="R" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="N_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="G_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="S" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="Ñ_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="S_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="O_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="T_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="U" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="V" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="L_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="V_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="Z_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="W" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="R_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="W_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="U_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="X_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="P" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="Y" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="Y_" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="Z" src="img/default.png" onclick="showImage(event)" />
+    <img class="card" id="T" src="img/default.png" onclick="showImage(event)" />
+
+    <div>
+      <h5 style="font-family: Arial;">Desarrollado por Corazón en señas.</h5>
+    </div>
+
+  </div>
+</body>
+
+</html>
